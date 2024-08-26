@@ -33,4 +33,4 @@ jobs:
 
     # Step 5: Run the application
     - name: Run application
-      run: dotnet run --project FluxCartBot1.csproj
+      run: dotnet run --project ConsoleFloxCartBot.csproj
