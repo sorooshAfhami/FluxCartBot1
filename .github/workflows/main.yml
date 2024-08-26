@@ -1,0 +1,38 @@
+name: Run FluxCartBot1 Application
+
+# This specifies the event that triggers the workflow. 
+# In this case, it will run when code is pushed to the main branch or on a schedule.
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # This is a cron job to run the workflow every day at midnight.
+    - cron: '0 0 * * *'
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the code from your repository
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Step 2: Set up .NET environment
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 7.x
+
+    # Step 3: Restore project dependencies
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # Step 4: Build the project
+    - name: Build project
+      run: dotnet build --configuration Release
+
+    # Step 5: Run the application
+    - name: Run application
+      run: dotnet run --project FluxCartBot1.csproj
