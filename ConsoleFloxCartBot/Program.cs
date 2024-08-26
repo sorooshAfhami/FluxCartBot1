@@ -42,12 +42,12 @@ async Task OnMessage(Message msg, UpdateType type)
 
         if (msg.Text == "/start")
         {
-            decimal current = 0;
-            decimal total = 0;
-            decimal rate = 0;
-            decimal Comission = 0;
-            decimal SuggestCurrency = 0;
-            Int64 SuggestDay = 0;
+            current = 0;
+            total = 0;
+            rate = 0;
+            Comission = 0;
+            SuggestCurrency = 0;
+            SuggestDay = 0;
 
             list.Clear();
 
