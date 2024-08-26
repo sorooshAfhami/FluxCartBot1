@@ -6,9 +6,7 @@ on:
   push:
     branches:
       - main
-  schedule:
-    # This is a cron job to run the workflow every day at midnight.
-    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   build-and-run:
