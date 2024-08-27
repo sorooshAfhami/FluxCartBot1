@@ -33,5 +33,5 @@ jobs:
 
     # Step 5: Run the application
     - name: Run application
-      run: dotnet run --project ConsoleFloxCartBot/ConsoleFloxCartBot.csproj
+      run: dotnet run --project ConsoleFloxCartBot/ConsoleFloxCartBot.csproj & wait $!
                                 
