@@ -128,8 +128,8 @@ async Task OnMessage(Message msg, UpdateType type)
         // await bot.SendTextMessageAsync(msg.Chat, "موجودی مورد انتظار خود را وارد کنید و در انتها علامت # را وارد کنید");
         //await bot.SendTextMessageAsync(msg.Chat, "مقدار وارد شده = " + current);
     
-    if (msg.Text is null) return;	// we only handle Text messages here
-    Console.WriteLine($"Received {type} '{msg.Text}' in {msg.Chat}");
+    //if (msg.Text is null) return;	// we only handle Text messages here
+    //Console.WriteLine($"Received {type} '{msg.Text}' in {msg.Chat}");
     // let's echo back received text in the chat
    // await bot.SendTextMessageAsync(msg.Chat, $"{msg.From} said: {msg.Text}");
 }
